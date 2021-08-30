@@ -2,7 +2,6 @@
 version: "2.4"
 services:
     node-red:
-        build: ./images/node-red
         image: node-red
         container_name: my-node-red
         restart: always
