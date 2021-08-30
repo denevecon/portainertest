@@ -9,4 +9,6 @@ services:
       - /var/lib/docker/volumes/ha/config:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
+    ports:
+      - 8123:8123
     network_mode: host
