@@ -1,0 +1,10 @@
+# Docker Compose Yaml 
+version: "2.4"
+services: 
+    mongodb:
+        container_name: mongo
+        image: mongo:3
+        environment: 
+            - TZ=Europe/Amsterdam
+        volumes:
+            - /var/lib/docker/volumes/mongo/data/db:/data/db
