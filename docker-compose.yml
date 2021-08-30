@@ -2,7 +2,7 @@
 version: "2.4"
 services:
     node-red:
-        image: node-red
+        image: nodered/node-red:latest
         container_name: my-node-red
         restart: always
         ports:
