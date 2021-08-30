@@ -1,1 +1,12 @@
-kjkjkj
+# Docker Compose Yaml 
+version: "2.4"
+services:
+    node-red:
+        build: ./images/node-red
+        image: node-red
+        container_name: my-node-red
+        restart: always
+        ports:
+            - 1880:1880
+        volumes:
+             - /var/lib/docker/volumes/node-red/data:/data
