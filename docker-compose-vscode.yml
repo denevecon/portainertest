@@ -1,7 +1,7 @@
   # Visual Studio code
   vscode:
     container_name: vscode
-    image: codercom/code-server:v2
+    image: codercom/code-server:latest
     volumes:
       # Set <project dir> to the directory you want to open in VS Code.
       - /var/lib/docker/volumes/ha/config:/home/coder/project
