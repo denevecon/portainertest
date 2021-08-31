@@ -3,12 +3,11 @@ services:
   # HomeAssistant
   homeassistant:
     container_name: home-assistant
-    image: homeassistant/home-assistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
     volumes:
       # Local path where your home assistant config will be stored
       - /var/lib/docker/volumes/ha/config:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
-    ports:
-      - 8123:8123
+    privileged: true
     network_mode: host
