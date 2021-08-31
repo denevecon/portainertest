@@ -11,7 +11,10 @@
       - "8443:8443"
     command: code-server --auth password --port 8443 --disable-telemetry /home/coder/project
     environment:
-      PASSWORD: "klmklm"
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+      - PASSWORD: "klmklm"
     restart: unless-stopped
     
 # ---
