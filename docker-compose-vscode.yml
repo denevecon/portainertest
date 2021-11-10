@@ -33,7 +33,7 @@ services:
 #       - SUDO_PASSWORD_HASH= #optional
 #       - PROXY_DOMAIN=code-server.my.domain #optional
     volumes:
-      - /var/lib/docker/volumes/ha/config:/config
+      - /var/lib/docker/volumes/ha:/ha
     ports:
       - 8443:8443
     restart: unless-stopped
