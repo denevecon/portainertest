@@ -33,7 +33,8 @@ services:
 #       - SUDO_PASSWORD_HASH= #optional
 #       - PROXY_DOMAIN=code-server.my.domain #optional
     volumes:
-      - /var/lib/docker/volumes/ha:/ha
+      - /var/lib/docker/volumes/ha/config:/home/coder/project
+      - /var/lib/docker/volumes/vscode/config:/home/coder/.local/share/code-server
     ports:
       - 8443:8443
     restart: unless-stopped
